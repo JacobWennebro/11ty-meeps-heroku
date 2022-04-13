@@ -3,3 +3,8 @@ layout: base.njk
 title: Hello World
 ---
 
+<ul>
+    {% for meep in heroku.data %}
+    <li title="{{ meep.created_at }}" style="color: #{{ meep.color }}">{{ meep.body }}</li>
+    {% endfor %}
+</ul> 
